@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z "$1" ]] then
+  echo "Use: math [number] [number]"
+  exit 1
+fi
+
+if [[ -z "$2" ]] then
+  echo "Use: math [number] [number]"
+  exit 1
+fi
+
+let "c = $1 $2 $3"
+echo "$c"

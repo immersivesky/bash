@@ -17,3 +17,9 @@ echo "Dirrefent parameters"
 
 echo "Conditions and boolean operators"
 ./csbo
+
+echo "For-in elements"
+./loops
+
+echo "While condition"
+./while_loops
