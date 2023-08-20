@@ -1,0 +1,19 @@
+#!/bin/bash
+
+echo "Running echo script..."
+./echo
+
+echo "Running equalif script..."
+./equalif -a -a
+
+echo "Different parameters"
+./equalif -a -b
+
+echo "Running equalsif script..."
+./equalsif -a -a -a
+
+echo "Dirrefent parameters"
+./equalsif -a -b -c
+
+echo "Conditions and boolean operators"
+./csbo
