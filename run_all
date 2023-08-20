@@ -23,3 +23,9 @@ echo "For-in elements"
 
 echo "While condition"
 ./while_loops
+
+echo "Math results:"
+./math 2 + 2
+./math 5 - 1
+./math 2 \* 2
+./math 8 / 2
