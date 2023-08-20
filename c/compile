@@ -1,0 +1,25 @@
+#!/bin/bash
+
+if [[ -n $1 ]] then
+  compiler=$1
+else
+  echo "Select compiler: [gcc/clang]"
+  read compiler
+fi
+
+case $compiler in
+gcc)
+  echo "Compile with gcc compiler"
+  gcc main.c -O3 -o main.out
+  exit 0
+  ;;
+clang)
+  echo "Compile with clang compiler"
+  clang main.c -O3 -o main.out
+  exit 0
+  ;;
+*)
+  echo "Compiler not found!"
+  exit 1
+  ;;
+esac
