@@ -1,0 +1,45 @@
+#!/bin/bash
+
+if [ -z $1 ] || [ -z $2 ] || [ -z $3 ]; then
+    echo "Usage: expr [name_expr] [number] [number]"
+    exit 404
+fi
+
+case $1 in
+add)
+    let "c=$2 + $3"
+    echo "Addition"
+    ;;
+substr)
+    let "c=$2 - $3"
+    echo "Substraction"
+    ;;
+multipl)
+    c=$(($2 * $3))
+    echo "Multiplication"
+    ;;
+divis)
+    c=$(($2 / $3))
+    echo "Division"
+    ;;
+degree)
+    c=$(($2 ** $3))
+    echo "Degree"
+    ;;
+residue)
+    c=$(($2 % $3))
+    echo "Residue"
+    ;;
+*)
+    echo "Usage: expr [name_expr] [number] [number]
+    • + — add
+    • - — substr
+    • * — multipl
+    • / — divis
+    • ** — degree
+    • % — residue"
+    exit 404
+    ;;
+esac
+
+echo "Result: " $c

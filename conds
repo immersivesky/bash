@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ $1 -eq $2 ]; then
+  echo  "They're the same"
+elif [  $1 -gt $2 ]; then
+  echo "First argument greeter than second"
+else
+  echo "Second argument greeter than first"
+fi # Finish
+
+read -p "Input [yes/no]: " confirmation
+case $confirmation in
+yes)
+    echo "You choice: Yes"
+    ;;
+  no)
+    echo "You choice: No"
+    ;;
+  *)
+    echo "Wrong choice!"
+esac

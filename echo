@@ -1,6 +1,0 @@
-#!/bin/bash
-
-workdir=$PWD
-echo "Script $0 in $workdir directory running!"
-
-exit 0

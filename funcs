@@ -1,0 +1,12 @@
+#!/bin/bash
+
+repeat_text() {
+    local text=$1
+    local reps=$2
+
+    for (( i=0; i<reps; i++ )) {
+        echo $text
+    }
+}
+
+repeat_text $1 $2

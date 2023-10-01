@@ -1,6 +1,22 @@
 #!/bin/bash
 
-for number in 1 2 3 4 5
-do
-  echo "Iteration is $number"
+resources=(apple banana avocado)
+for r in ${resources[@]}; do
+  echo Resource: $r
+done
+
+clothes=(cap tshirt jeans)
+for (( c=0; c<3; c++ )); do
+  echo "Clothes: " ${clothes[c]}
+done
+
+q=1
+echo "For exit usage: q"
+while [ $q = 1 ]; do
+  read e
+  if [ -z $e ]; then
+    continue
+  elif [ $e = "q" ]; then
+    q=$e
+  fi
 done
